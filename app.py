@@ -163,23 +163,23 @@ st.markdown("""
 def load_data():
 
     school_master = pd.read_csv(
-        "data/final_cleaned_school_master.csv"
+        "final_cleaned_school_master.csv"
     )
 
     infrastructure = pd.read_csv(
-        "data/final_cleaned_infrastructure.csv"
+        "final_cleaned_infrastructure.csv"
     )
 
     mid_day_meal = pd.read_csv(
-        "data/final_cleaned_mid_day_meal.csv"
+        "final_cleaned_mid_day_meal.csv"
     )
 
     test_scores = pd.read_csv(
-        "data/final_cleaned_test_scores.csv"
+        "final_cleaned_test_scores.csv"
     )
 
     attendance = pd.read_csv(
-        "data/final_cleaned_attendance.csv"
+        "final_cleaned_attendance.csv"
     )
 
     return (
