@@ -21,135 +21,158 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-    /* Main background */
-    .stApp {
-        background: #f7f9fc;
-    }
+.stApp {
+    background: #0b0f14;
+    color: #ffffff;
+}
 
-    /* Main content width */
-    .block-container {
-        padding-top: 2rem;
-        padding-bottom: 3rem;
-        max-width: 1200px;
-    }
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    max-width: 1200px;
+}
 
-    /* Header */
-    .hero {
-        background: linear-gradient(135deg, #eef4ff, #ffffff);
-        padding: 30px 35px;
-        border-radius: 20px;
-        border: 1px solid #e2e8f0;
-        margin-bottom: 25px;
-    }
+/* Header */
+.hero {
+    background: #111827;
+    padding: 30px 35px;
+    border-radius: 20px;
+    border: 1px solid #263244;
+    margin-bottom: 25px;
+}
 
-    .hero-title {
-        font-size: 38px;
-        font-weight: 750;
-        margin-bottom: 8px;
-        color: #172033;
-    }
+.hero-title {
+    font-size: 38px;
+    font-weight: 750;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
 
-    .hero-subtitle {
-        font-size: 17px;
-        color: #5b6577;
-        margin-bottom: 18px;
-    }
+.hero-subtitle {
+    font-size: 17px;
+    color: #b8c1cc;
+    margin-bottom: 18px;
+}
 
-    .status {
-        display: inline-block;
-        padding: 8px 14px;
-        border-radius: 20px;
-        background: #ecfdf3;
-        color: #16794c;
-        font-size: 14px;
-        font-weight: 600;
-        border: 1px solid #cceedd;
-    }
+.status {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: #123524;
+    color: #6ee7a0;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #245c3d;
+}
 
-    /* Question area */
-    .question-title {
-        font-size: 22px;
-        font-weight: 700;
-        color: #172033;
-        margin-bottom: 5px;
-    }
+/* Question area */
+.question-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
 
-    /* Understanding card */
-    .understanding-card {
-        background: white;
-        padding: 20px 24px;
-        border-radius: 16px;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 3px 12px rgba(20, 30, 50, 0.04);
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+/* Input box */
+.stTextInput input {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border: 1px solid #334155 !important;
+    border-radius: 10px !important;
+}
 
-    .understanding-title {
-        font-size: 20px;
-        font-weight: 700;
-        color: #172033;
-        margin-bottom: 15px;
-    }
+.stTextInput input::placeholder {
+    color: #8b98a8 !important;
+}
 
-    /* Metric cards */
-    .metric-card {
-        background: #f8fafc;
-        padding: 14px 16px;
-        border-radius: 12px;
-        border: 1px solid #e5eaf1;
-        margin-bottom: 10px;
-    }
+/* Understanding card */
+.understanding-card {
+    background: #111827;
+    padding: 20px 24px;
+    border-radius: 16px;
+    border: 1px solid #263244;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
-    .metric-label {
-        font-size: 12px;
-        color: #718096;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
+.understanding-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
 
-    .metric-value {
-        font-size: 16px;
-        font-weight: 650;
-        color: #1f2937;
-        margin-top: 3px;
-    }
+/* Metric cards */
+.metric-card {
+    background: #151d2b;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #293548;
+    margin-bottom: 10px;
+}
 
-    /* Summary */
-    .summary-card {
-        background: white;
-        padding: 22px 25px;
-        border-radius: 16px;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 3px 12px rgba(20, 30, 50, 0.04);
-        margin-top: 20px;
-    }
+.metric-label {
+    font-size: 12px;
+    color: #8996a8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
 
-    .summary-title {
-        font-size: 20px;
-        font-weight: 700;
-        color: #172033;
-        margin-bottom: 10px;
-    }
+.metric-value {
+    font-size: 16px;
+    font-weight: 650;
+    color: #ffffff;
+    margin-top: 3px;
+}
 
-    /* Buttons */
-    .stButton > button {
-        width: 100%;
-        border-radius: 10px;
-        height: 46px;
-        font-size: 16px;
-        font-weight: 650;
-    }
+/* Summary */
+.summary-card {
+    background: #111827;
+    padding: 22px 25px;
+    border-radius: 16px;
+    border: 1px solid #263244;
+    margin-top: 20px;
+}
 
-    /* Footer */
-    .footer {
-        text-align: center;
-        color: #8a94a6;
-        font-size: 13px;
-        margin-top: 40px;
-        padding-top: 20px;
-        border-top: 1px solid #e5eaf1;
-    }
+.summary-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.stButton > button {
+    width: 100%;
+    border-radius: 10px;
+    height: 46px;
+    font-size: 16px;
+    font-weight: 650;
+    background: #ffffff;
+    color: #0b0f14;
+    border: none;
+}
+
+.stButton > button:hover {
+    background: #e5e7eb;
+    color: #000000;
+}
+
+/* Normal text */
+.stMarkdown,
+.stCaption {
+    color: #d1d5db;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #707b8c;
+    font-size: 13px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #263244;
+}
 
 </style>
 """, unsafe_allow_html=True)
@@ -163,23 +186,23 @@ st.markdown("""
 def load_data():
 
     school_master = pd.read_csv(
-        "final_cleaned_school_master.csv"
+        "data/final_cleaned_school_master.csv"
     )
 
     infrastructure = pd.read_csv(
-        "final_cleaned_infrastructure.csv"
+        "data/final_cleaned_infrastructure.csv"
     )
 
     mid_day_meal = pd.read_csv(
-        "final_cleaned_mid_day_meal.csv"
+        "data/final_cleaned_mid_day_meal.csv"
     )
 
     test_scores = pd.read_csv(
-        "final_cleaned_test_scores.csv"
+        "data/final_cleaned_test_scores.csv"
     )
 
     attendance = pd.read_csv(
-        "final_cleaned_attendance.csv"
+        "data/final_cleaned_attendance.csv"
     )
 
     return (
